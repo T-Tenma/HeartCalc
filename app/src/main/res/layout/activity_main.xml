@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tenma.heartcalc.MainActivity">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.hanks.htextview.HTextView
+            android:id="@+id/score"
+            android:layout_alignParentRight="true"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="30sp"
+            app:layout_widthPercent="20%"/>
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="30sp"
+            android:gravity="right"
+            android:layout_toStartOf="@id/score"
+            android:text="分数："
+            app:layout_widthPercent="30%"
+            />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        >
+        <com.hanks.htextview.HTextView
+            android:id="@+id/firstNum"
+            app:animateType="evaporate"
+            android:layout_width="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content" />
+
+        <com.hanks.htextview.HTextView
+            android:id="@+id/linkChar"
+            app:animateType="line"
+            android:layout_width="wrap_content"
+            android:textSize="30sp"
+            app:isAnimate="true"
+            android:layout_height="wrap_content" />
+
+        <com.hanks.htextview.HTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp"
+            app:isAnimate="true"
+            android:id="@+id/secondNum"
+            app:animateType="evaporate"/>
+    </LinearLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/question"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/answerA"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#00BBFF"
+            android:text="AnswerA"
+            android:layout_alignParentLeft="true"
+            app:layout_heightPercent="20%"
+            android:gravity="center"
+            app:layout_widthPercent="30%"/>
+
+        <TextView
+            android:id="@+id/answerB"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:background="#4400ff00"
+            android:text="AnswerB"
+            app:layout_heightPercent="20%"
+            android:layout_toEndOf="@id/answerA"
+            app:layout_widthPercent="30%"/>
+
+
+        <TextView
+            android:id="@+id/answerC"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#770000ff"
+            android:gravity="center"
+            android:layout_toEndOf="@id/answerB"
+            android:text="AnswerC"
+            app:layout_heightPercent="20%"
+            app:layout_widthPercent="30%"/>
+    </android.support.percent.PercentRelativeLayout>
+
+
+
+</RelativeLayout>
